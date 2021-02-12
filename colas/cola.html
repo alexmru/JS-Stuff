@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cola sort</title>
+    <script>
+        var products = [{name: "Grapefruit", calories: 150, color:"red", sold: 8200},
+        {name: "Orange", calories: 155, color:"orange", sold: 23400},
+        {name: "Cola", calories: 200, color:"caramel", sold: 88700},
+        {name: "Diet Cola", calories: 0, color:"caramel", sold: 55200},
+        {name: "Fanta", calories: 177, color:"yellow", sold: 8200},
+        {name: "Sprite", calories: 170, color:"clear", sold: 16500},
+        {name: "Frutti Fresh", calories: 169, color:"orange", sold: 24200},
+        {name: "Water", calories: 0, color:"clear", sold: 48100}];
+
+        function compareSold(colaA, colaB){
+            if(colaA.sold > colaB.sold){
+                return 1;
+            } else if (colaA.sold === colaB.sold){
+                return 0;
+            } else {
+                return -1;
+            }
+        }
+
+        function compareName(colaA, colaB){
+            if(colaA.name > colaB.name) {
+                return 1;
+            } else if (colaA.name === colaB.name) {
+                return 0;
+            } else {
+                return -1;
+            }
+        }
+
+        function compareCalories(colaA, colaB){
+            if(colaA.calories > colaB.calories) {
+                return 1;
+            } else if (colaA.calories === colaB.calories) {
+                return 0;
+            } else {
+                return -1;
+            }
+        }
+
+        function compareColor(colaA, colaB){
+            if(colaA.color > colaB.color) {
+                return 1;
+            } else if (colaA.color === colaB.color) {
+                return 0;
+            } else {
+                return -1;
+            }
+        }
+
+
+        function printProducts(products) {
+            for (i=0; i<products.length; i++){
+                console.log("Name: " + products[i].name + ", Calories: " + products[i].calories + ", Color: " + products[i].color + ", Units sold: " + products[i].sold);
+            }
+        }
+        console.log("Products sorted by units sold:")
+        products.sort(compareSold);
+        printProducts(products);
+        console.log("Products sorted by name:")    
+        products.sort(compareName);
+        printProducts(products);
+        console.log("Products sorted by number of calories")
+        products.sort(compareCalories);
+        printProducts(products);
+        console.log("Products sorted by color:")  
+        products.sort(compareColor);
+        printProducts(products);
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
