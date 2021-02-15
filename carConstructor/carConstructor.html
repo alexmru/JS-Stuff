@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car constructor!</title>
+    <script>
+        function carConstructor(make, model, year, color, passengers, convertible, mileage, started) {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+            this.color = color;
+            this.passengers = passengers;
+            this.convertible = convertible;
+            this.mileage = mileage;
+            this.started = false;
+            this.start = function(){
+                this.started = true;
+            };
+            this.stop = function() {
+                this.started = false;
+            };
+            this.drive = function() {
+                if(this.started) {
+                    console.log(this.make + " " + this.model + " goes Zoom Zoom !");
+                } else {
+                    console.log("Start engine first !!!");
+                }
+            }
+        };
+
+        var chevy = new carConstructor("Chevy", "Bel Air", 1957, "red", 2, false, 1021);
+        var cadi = new carConstructor("GM", "Cadillac", 1955, "tan", 5, false, 12892);
+        var taxi = new carConstructor("Webville Motors", "Taxi", 1955, "yellow", 4, false, 284157);
+        var fiat = new carConstructor("Fiat", "500", 1957, "Medium Blue", 2, false, 88000);
+
+        var cars = [chevy, cadi, taxi, fiat];
+
+        for(i=0; i<cars.length; i++) {
+            cars[i].start();
+            cars[i].drive();
+            cars[i].stop();
+        }
+
+    </script>
+</head>
+<body>
+
+    
+</body>
+</html>
