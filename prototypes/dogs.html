@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogs prototypes</title>
+    <script>
+        function Dog(name, breed, weight) {
+            this.name = name;
+            this.breed = breed;
+            this.weight = weight;
+        }
+
+        Dog.prototype.species = "Canine";
+        Dog.prototype.bark = function() {
+            if(this.weight > 25) {
+                console.log(this.name + " says WOOF WOOF!!");
+            } else {
+                console.log(this.name + " says Yip!");
+            }
+        };
+        Dog.prototype.run = function(){
+            console.log(this.name + " is running!!");
+        }
+
+        Dog.prototype.wag = function(){
+            console.log(this.name + " is wagging its tail !");
+        }
+
+        Dog.prototype.sit = function() {
+            if(this.sitting){
+            console.log(this.name + " is already sitting.");
+            } else {
+                this.sitting = true;
+                console.log(this.name + " is now sitting.");
+            }
+        }
+
+        Dog.prototype.sitting = false;
+
+
+        var fido = new Dog("Fido", "Mixed", 33);
+        var fluffy = new Dog("Fluffy", "Poodle", 20);
+        var jack = new Dog("Jack", "Sheperd", 40);
+        var barbaby = new Dog("Barnaby", "Basset Hound", 55);
+
+        fido.bark();
+        fido.run(); 
+        fido.wag();
+        fido.sit();
+        fido.sit();
+
+        fluffy.run();
+        fluffy.bark();
+        fluffy.wag();
+
+        jack.bark();
+        jack.run();
+        jack.wag();
+        jack.sit();
+        jack.sit();
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
