@@ -45,22 +45,67 @@
         var jack = new Dog("Jack", "Sheperd", 40);
         var barbaby = new Dog("Barnaby", "Basset Hound", 55);
 
-        fido.bark();
-        fido.run(); 
-        fido.wag();
-        fido.sit();
-        fido.sit();
+        // fido.bark();
+        // fido.run(); 
+        // fido.wag();
+        // fido.sit();
+        // fido.sit();
 
-        fluffy.run();
-        fluffy.bark();
-        fluffy.wag();
+        // fluffy.run();
+        // fluffy.bark();
+        // fluffy.wag();
 
-        jack.bark();
-        jack.run();
-        jack.wag();
-        jack.sit();
-        jack.sit();
+        // jack.bark();
+        // jack.run();
+        // jack.wag();
+        // jack.sit();
+        // jack.sit();
 
+        function ShowDog(name, breed, weight, handler){
+            Dog.call(this, name, breed, weight);
+            this.handler = handler;
+        }
+        ShowDog.prototype = new Dog();
+        ShowDog.prototype.constructor = ShowDog;
+
+        ShowDog.prototype.league = "Webville";
+        ShowDog.prototype.stack = function() {
+            console.log("Stack!");
+        };
+        ShowDog.prototype.bait = function() {
+            console.log("Bait");
+        };
+        ShowDog.prototype.gait = function(kind) {
+            console.log(kind + "ing");
+        };
+        ShowDog.prototype.groom = function() {
+            console.log("Groom!");
+        };
+
+        var scotty = new ShowDog("Scotty", "Scottish Terrier", 15, "Cookie");
+
+        // scotty.stack();
+        // scotty.bait();
+        // console.log(scotty.species);
+        // scotty.bark();
+
+        var bido = new Dog("Bido", "Mixed" , 38);
+        if(bido instanceof Dog) {
+            console.log("Bido is a DOG");
+        }
+        if(bido instanceof ShowDog) {
+            console.log("Bido is a SHOW DOG");
+        }
+        
+        if(scotty instanceof Dog) {
+            console.log("Scotty is a DOG");
+        }
+
+        if(scotty instanceof ShowDog) {
+            console.log("Scotty is a SHOW DOG");
+        }
+        console.log(bido.constructor);
+        console.log(scotty.constructor);
         
     </script>
 </head>
