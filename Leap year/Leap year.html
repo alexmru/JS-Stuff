@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Test Page</title>
+    <title>Leap year</title>
     <style>
         body {
             text-align: center;
@@ -13,16 +12,26 @@
         }
     </style>
     <script>
-
+        
     </script>
 </head>
-
 <body>
     <h1>Check for alerts or check the console !</h1>
 
     <script>
+        function isLeap(year) {
+    if ( year % 400 === 0 ) {
+        return "Leap year.";
+    } else if ( year % 4 === 0 && year % 100 !== 0) {
+        return "Leap year.";
+    } else {
+        return "Not a leap year";
+    }
+}
 
-    </script>
+console.log(isLeap(1988));
+console.log(isLeap(1989));
+
+          </script>
 </body>
-
 </html>
