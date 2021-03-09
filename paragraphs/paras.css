@@ -1,0 +1,11 @@
+.brd {
+border: groove;
+border-color: indigo;
+border-radius: 20px;
+display: inline-block;
+}
+
+
+.green {
+    color: green;
+}
