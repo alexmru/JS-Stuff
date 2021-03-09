@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-decoration: underline;
+            font-size: large;
+            font-weight: 900;
+            color: crimson;
+            display: inline-block;
+            margin-left: 45%;
+        }
+
+        input {
+            height: 12%;
+            display: block;
+            font-size: 1.5em;
+            background-color: lightgoldenrodyellow;
+        }
+
+        button {
+            display: block;
+            width: 20%;
+            height: 50px;
+            margin-top: 30px;
+            border-radius: 10px;
+            background-color: darkred;
+            color: darkturquoise;
+            font-weight: bold;
+            margin-left: 100px;
+            border-style: none;
+            font-size: 1.2em;
+
+        }
+
+        form {
+            display: block;
+            margin-left: 45%;
+            width: 500px;
+            height: 500px;
+            text-align: center;
+        }
+
+        .feedback {
+            height: 40px;
+            color: firebrick;
+        }
+
+        .success {
+            border: 2px solid limegreen;
+        }
+
+        .failed {
+            border: 2px solid crimson;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Form validation practice !</h1>
+    <form class="form1" action="">
+        <input type="text" id="username" placeholder="Username">
+        <button type="submit">Submit</button>
+
+        <div class="feedback"></div>
+    </form>
+
+
+<script src="formVal.js"></script>
+</body>
+</html>
