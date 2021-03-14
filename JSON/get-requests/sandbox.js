@@ -31,12 +31,28 @@
 
 // New Method !
 
-fetch('https://jsonplaceholder.typicode.com/todos').then((response) => {
-    console.log("resolved!", response);
-    console.log(response.status);
-    return response.json();
-}).then((data) => {
-    console.log(data);
-}).catch((err) => {
-    console.log("rejected!", err);
-});
+// fetch('https://jsonplaceholder.typicode.com/todos').then((response) => {
+//     console.log("resolved!", response);
+//     console.log(response.status);
+//     return response.json();
+// }).then((data) => {
+//     console.log(data);
+// }).catch((err) => {
+//     console.log("rejected!", err);
+// });
+
+const getTodos = async() => {
+    const response = await fetch('https://jsonplaceholder.typicode.com/todos');
+    const data = await response.json();
+
+    if (response.status !== 200) {
+        throw new Error("cannot fetch the data")
+    }
+
+    return data;
+}
+
+getTodos()
+.then(data => console.log("resolved :", data))
+.catch(err => console.log("rejected", err.message));
+
