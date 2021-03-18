@@ -1,11 +1,1 @@
-"use strict";
-
-var greet = function greet(nume) {
-  console.log("hello ".concat(nume));
-};
-
-greet('Mario');
-greet('Luigi');
-greet('Johnny');
-greet('Marian');
-greet('Cati');
+(()=>{"use strict";console.log("dom file");var e=document.querySelector("body"),n=function(n){var l=document.createElement("h1");l.innerText=n,e.appendChild(l)};e.style.background="peachpuff",n("Hello from the dom.js file");var l="alex@themanthelegend.com",o=[{username:"alex",premium:!1},{username:"alex",premium:!0},{username:"alex",premium:!0},{username:"alex",premium:!1},{username:"alex",premium:!0}],r=function(e){return e.filter((function(e){return e.premium}))}(o);console.log(o,r),console.log("index file"),n("Titlu adaugat din index js"),console.log(l),n(l),console.log("test")})();

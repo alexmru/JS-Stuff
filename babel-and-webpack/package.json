@@ -4,15 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "babel": "node_modules/.bin/babel src/index.js -w -o dist/assets/indexOld.js"
+    "build": "node_modules/.bin/webpack --mode production",
+    "serve": "webpack serve --mode development"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@babel/cli": "^7.13.10",
-    "@babel/core": "^7.13.10"
+    "@babel/core": "^7.13.10",
+    "webpack-dev-server": "^3.11.2"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.13.10"
+    "@babel/preset-env": "^7.13.10",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.26.3",
+    "webpack-cli": "^4.5.0"
   }
 }

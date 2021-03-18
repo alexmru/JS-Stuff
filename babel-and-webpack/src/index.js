@@ -1,10 +1,17 @@
-const greet = nume => {
-    console.log(`hello ${nume}`);
-}
+import {stylebody, addTitle, contact} from './dom';
 
-greet('Mario');
-greet('Luigi');
-greet('Johnny');
-greet('Marian');
-greet('Cati');
+import users, {getPremUsers} from './data';
 
+const premUsers = getPremUsers(users);
+
+console.log(users, premUsers);
+
+console.log('index file');
+
+addTitle('Titlu adaugat din index js');
+
+console.log(contact);
+
+addTitle(contact);
+
+console.log('test');
