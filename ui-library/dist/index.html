@@ -3,9 +3,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title></title>
+  <title>Ui-library</title>
+  <style>
+    body {
+      font-size: 1.5em;
+    }
+    .container {
+      margin: 40px;
+      margin-top: 60px;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <!-- tooltip -->
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor exercitationem soluta libero <span class="tooltip" data-message='Im a tooltip'>incidunt molestias</span> saepe animi quaerat minima! Totam optio aspernatur, maiores tenetur exercitationem eaque iusto magnam consequuntur perspiciatis animi.
+    </p>
+    <h2>Services</h2>
+    <!-- Dropdowns -->
+    <div class="dropdown">
+    <div class="trigger">Awesome T-shirt Designs</div>
+    <div class="content">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque consequuntur omnis cumque? Maxime dolore fugiat quis consectetur natus nesciunt ducimus inventore. Ad explicabo ipsum quod, praesentium excepturi vero sint suscipit!!!</p>
+    </div>
+    </div>
+    <div class="dropdown">
+      <div class="trigger">Cool Sticker Printing</div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere soluta necessitatibus dolores quae itaque, pariatur commodi neque similique provident accusantium mollitia recusandae non cum fuga eos libero ducimus aliquid distinctio.</p>
+      </div>
+      </div>
+      <h2>More information</h2>
+      <!-- TABS -->
+      <div class="tabs">
+        <ul>
+          <li class="trigger active" data-target='#about'>About</li>
+          <li class="trigger" data-target="#delivery">Delivery info</li>
+          <li class="trigger" data-target="#returns">Returns info</li>
+        </ul>
+        <div id="about" class="content active">
+          <h3>about</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad sapiente eveniet dolorem illum nisi beatae magni necessitatibus harum provident! Provident mollitia ipsum assumenda non! Odit reprehenderit sequi aperiam nobis! Accusantium.</p>
+        </div>
+        <div id="delivery" class="content">
+          <h3>delivery</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, distinctio placeat nostrum eligendi maxime id eius ad odio unde officiis.</p>
+        </div>
+        <div id="returns" class="content">
+          <h3>Returns information</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis debitis impedit fugiat atque est, quos nemo inventore vel, officiis veniam ex, temporibus rem natus autem? Inventore nihil nulla minus quidem eveniet assumenda non officiis est quia eius expedita accusamus quae ut magni, reiciendis sint velit eos earum dicta. Distinctio, molestias!</p>
+        </div>
+
+      </div>
+  </div>
 
   <script src="assets/bundle.js"></script>
 </body>

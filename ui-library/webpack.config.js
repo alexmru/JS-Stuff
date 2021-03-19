@@ -20,6 +20,11 @@ module.exports = {
           presets: ['@babel/preset-env']
         }
       }
-    }]
+    },
+    {
+      test:/\.css$/,
+      use: ['style-loader', 'css-loader']
+    }
+  ]
   }
 };
