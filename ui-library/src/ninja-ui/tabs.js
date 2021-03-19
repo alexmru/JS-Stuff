@@ -1,7 +1,9 @@
+import './styles/tabs.css';
+
 class Tabs {
     constructor(container) {
         this.container = container;
-        this.tabs = container.querySelector('.trigger');
+        this.tabs = container.querySelectorAll('.trigger');
     }
     init() {
         this.tabs.forEach(element => {
@@ -23,6 +25,10 @@ class Tabs {
             item.classList.remove('active');
         })
         // add new active class to content
-
+        const selector = e.target.getAttribute('data-target');
+        const content = this.container.querySelector(selector);
+        content.classList.add('active');
     }
 }
+
+export {Tabs as default};
