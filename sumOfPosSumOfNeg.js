@@ -15,6 +15,6 @@
 
 let arr = ["mama", "tata", "oana", "cati" ];
 
-arr2 = arr.forEach(n => n+ "a");
+const arr2 = arr.forEach(n => n+ "a");
 
 console.log(arr2);
