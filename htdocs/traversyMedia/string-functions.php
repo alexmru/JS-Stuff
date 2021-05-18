@@ -13,4 +13,16 @@ $length = strlen($string);
 echo $length;
 echo '<br>';
 
-$output = strpos();
+$position = strpos($string, 'a');
+echo $position;
+echo '<br>';
+
+$upper = strtoupper($string);
+echo $upper;
+echo '<br>';
+
+$salut = 'Buna ziua !';
+$salutModificat = str_replace('ziua', 'seara', $salut);
+echo $salutModificat;
+echo '<br>';
+
