@@ -1,0 +1,12 @@
+The compare() function accepts two arguments a and b. 
+The sort() method will sort elements based on the return value of the compare() function with the following rules:
+
+1. If compare(a,b) is less than zero, the sort() method sorts a to a lower index than b. 
+In other words, a will come first.
+2. If compare(a,b) is greater than zero, the sort() method sort b to a lower index than a, 
+i.e., b will come first.
+3. If compare(a,b) returns zero, 
+the sort() method considers a equals b and leaves their positions unchanged.
+
+
+https://www.javascripttutorial.net/javascript-array-sort/
