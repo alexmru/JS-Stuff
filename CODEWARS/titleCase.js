@@ -1,61 +1,26 @@
 function titleCase(title, minorWords) {
-    let resultArr = [];
-
-    let titleArr = title.split(' ').map(x => {
-      let xArr = x.split('');
-      let res = [];
-      for(i=0; i<xArr.length; i++) {
-        res.push(xArr[i].toLowerCase()); 
-      }
-      return res.join('');
-  });
-  if(!minorWords) {
-    for(i=0; i< titleArr.length; i++) {
-        let word = titleArr[i];
-        let wordCap = word.charAt(0).toUpperCase() + word.substring(1);
-            resultArr.push(wordCap)
-        }
-        return resultArr.join(' ');
-    }
-
-    let lowerWords = minorWords.split(' ').map(x => {
-        let xArr = x.split('');
-        let res = [];
-        for(i=0; i<xArr.length; i++) {
-            res.push(xArr[i].toLowerCase()); 
-            }
-        return res.join('');
-    });
-
-    let theSame = false;
-    if(titleArr.length === lowerWords.length) {
+    let titleArr = title.toLowerCase().split(' ');
+    if(!minorWords) {
+        let result = [];
         for(i=0; i< titleArr.length; i++) {
-            if(titleArr[i] === lowerWords[i]) {
-                theSame = true;
-            }
+            result.push(titleArr[i].charAt(0).toUpperCase() + titleArr[i].substring(1))
         }
-    }
+        return result.join(' ');
+    } else if (title === minorWords) {
+        return title.charAt(0).toUpperCase() + title.substring(1);
+    } else if (minorWords) {
+        let minorArr = minorWords.toLowerCase().split(' ');
+        let result = [];
+        result.push(titleArr[0].charAt(0).toUpperCase() + titleArr[0].substring(1))
+        for(i=1; i< titleArr.length; i++) {
+            minorArr.includes(titleArr[i]) 
+            ? result.push(titleArr[i].charAt(0).toLowerCase() + titleArr[i].substring(1)) 
+            : result.push(titleArr[i].charAt(0).toUpperCase() + titleArr[i].substring(1))
+        }
+        return result.join(' ');
+    } 
 
-    if(theSame) {
-        for(i=0; i< titleArr.length; i++) {
-            let word = titleArr[i];
-            let wordCap = word.charAt(0).toUpperCase() + word.substring(1);
-                resultArr.push(wordCap)
-            }
-            return resultArr.join(' ');
-        
-    }
-
-  for(i=0; i < titleArr.length; i++) {
-      let word = titleArr[i];
-      if(lowerWords.includes(word)) {
-          resultArr.push(word);
-      } else if (!lowerWords.includes(word)) {
-          let wordCap = word.charAt(0).toUpperCase() + word.substring(1);
-          resultArr.push(wordCap)
-      }
-  }
-  return resultArr.join(' ');
+    
 }
 
-console.log(titleCase('aa clash of KINGS'))
+console.log(titleCase('a clash of KINGS', 'a an the OF'))
