@@ -4,11 +4,12 @@
   "description": "Proiect Natours - cursul Jonas Udemy",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "author": "Alex Miroiu",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^6.0.0"
-  }
+  },
+  "dependencies": {}
 }
