@@ -1,19 +1,26 @@
+function validParentheses(parens){
+    let onesAndZeros = parens.split('').map(x => x === '(' ? 1 : 0).join('');
+    do {
+        let newStr = onesAndZeros.replace('10', '');
+        onesAndZeros = newStr;
+    } while(onesAndZeros.includes('10'));
+    if(onesAndZeros.length === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(validParentheses("())(()"));
+
+
 // function validParentheses(parens){
-//     let parensArr = parens.split('');
-//     if(parensArr.length === 0) {
-//         return true;
+//     var n = 0;
+//     for (var i = 0; i < parens.length; i++) {
+//       if (parens[i] == '(') n++;
+//       if (parens[i] == ')') n--;
+//       if (n < 0) return false;
 //     }
-//     let decodedParens = parensArr.map(x => x === '(' ? 1 : -1 ).reduce((a,b) => a+b);
-//     if(parensArr[0] === '(' && parensArr[parensArr.length-1] === ')' && decodedParens === 0) {
-//         return true;
-//     } else {
-//         return false;
-//     }
+    
+//     return n == 0;
 //   }
-
-//   console.log(validParentheses("())(()"));
-
-// Mai este de lucrat, inca nu este terminata, trece toate testele, 
-// mai putin cel din verificarea de mai sus
-
 
