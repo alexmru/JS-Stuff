@@ -30,6 +30,12 @@ html {
   font-size: 62.5%;
 }
 
+@media screen and (max-width: 68.75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -49,6 +55,14 @@ body {
   min-height: 50rem;
 }
 
+@media only screen and (max-width: 75em) {
+  .container {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
 .header {
   font-size: 1.4rem;
   height: 7rem;
@@ -59,8 +73,22 @@ body {
   align-items: center;
 }
 
+@media screen and (max-width: 31.25em) {
+  .header {
+    flex-wrap: wrap;
+    height: 11rem;
+    align-content: space-around;
+  }
+}
+
 .content {
   display: flex;
+}
+
+@media screen and (max-width: 56.25em) {
+  .content {
+    flex-direction: column;
+  }
 }
 
 .sidebar {
@@ -84,6 +112,18 @@ body {
   border-bottom: var(--line);
 }
 
+@media screen and (max-width: 56.25em) {
+  .detail {
+    padding: 3rem;
+  }
+}
+
+@media screen and (max-width: 37.5em) {
+  .detail {
+    flex-direction: column;
+  }
+}
+
 .description {
   background-color: white;
   flex: 0 0 60%;
@@ -91,6 +131,20 @@ body {
   box-shadow: var(--shadow-light);
   padding: 3rem;
   font-size: 1.4rem;
+}
+
+@media screen and (max-width: 56.25em) {
+  .description {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
+}
+
+@media screen and (max-width: 37.5em) {
+  .description {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
 }
 
 .user-reviews {
@@ -110,6 +164,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 31.25em) {
+  .search {
+    order: 1;
+    flex: 0 0 100%;
+  }
 }
 
 .search__input {
@@ -219,12 +280,31 @@ body {
   margin-top: 3.5rem;
 }
 
+@media screen and (max-width: 56.25em) {
+  .side-nav {
+    display: flex;
+    margin: 0;
+  }
+}
+
 .side-nav__item {
   position: relative;
 }
 
 .side-nav__item:not(:last-child) {
   margin-bottom: .5rem;
+}
+
+@media screen and (max-width: 56.25em) {
+  .side-nav__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 56.25em) {
+  .side-nav__item {
+    flex: 1;
+  }
 }
 
 .side-nav__item::before {
@@ -260,6 +340,20 @@ body {
   z-index: 2;
 }
 
+@media screen and (max-width: 56.25em) {
+  .side-nav__link:link, .side-nav__link:visited {
+    padding: 2rem;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 37.5em) {
+  .side-nav__link:link, .side-nav__link:visited {
+    flex-direction: column;
+    padding: 1.5rem .5rem;
+  }
+}
+
 .side-nav__icon {
   width: 1.75rem;
   height: 1.75rem;
@@ -267,11 +361,26 @@ body {
   fill: currentColor;
 }
 
+@media screen and (max-width: 37.5em) {
+  .side-nav__icon {
+    margin-right: 0;
+    margin-bottom: .7rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
 .legal {
   font-size: 1.2rem;
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem;
+}
+
+@media screen and (max-width: 56.25em) {
+  .legal {
+    display: none;
+  }
 }
 
 .gallery {
@@ -296,6 +405,13 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 1.5rem 3rem;
+}
+
+@media screen and (max-width: 37.5em) {
+  .overview__heading {
+    font-size: 1.8rem;
+    padding: 1.25rem 2rem;
+  }
 }
 
 .overview__stars {
@@ -331,15 +447,33 @@ body {
   flex-direction: column;
 }
 
+@media screen and (max-width: 37.5em) {
+  .overview__rating {
+    padding: 0 1.5rem;
+  }
+}
+
 .overview__rating-average {
   font-size: 2.25rem;
   font-weight: 300;
   margin-bottom: -3px;
 }
 
+@media screen and (max-width: 37.5em) {
+  .overview__rating-average {
+    font-size: 1.8rem;
+  }
+}
+
 .overview__rating-count {
   font-size: .8rem;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 37.5em) {
+  .overview__rating-count {
+    font-size: .7rem;
+  }
 }
 
 .btn-inline {
@@ -428,6 +562,10 @@ body {
   margin-right: auto;
 }
 
+.recommend__friends {
+  display: flex;
+}
+
 .recommend__photo {
   box-sizing: content-box;
   height: 4rem;
@@ -437,7 +575,7 @@ body {
 }
 
 .recommend__photo:not(:last-of-type) {
-  margin-right: -1.5rem;
+  margin-right: -2rem;
 }
 
 .review {
@@ -447,6 +585,13 @@ body {
   margin-bottom: 3.5rem;
   position: relative;
   overflow: hidden;
+}
+
+@media screen and (max-width: 56.25em) {
+  .review {
+    padding: 3rem;
+    margin-bottom: 3rem;
+  }
 }
 
 .review__text {
@@ -505,6 +650,12 @@ body {
 .cta {
   padding: 3.5rem 0;
   text-align: center;
+}
+
+@media screen and (max-width: 56.25em) {
+  .cta {
+    padding: 2.5rem 0;
+  }
 }
 
 .cta__book-now {

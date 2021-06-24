@@ -4,6 +4,12 @@
     background-color: var(--color-grey-light-2);
     box-shadow: var(--shadow-dark);
     min-height: 50rem;
+
+    @media only screen and (max-width: $bp-largest){
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 .header {
@@ -14,10 +20,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: $bp-smallest) {
+        flex-wrap: wrap;
+        height: 11rem;
+        align-content: space-around;
+    }
 }
 
 .content {
     display: flex;
+
+    @media screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
 
 }
 
@@ -40,6 +55,12 @@
     padding: 4.5rem;
     background-color: var(--color-grey-light-1);
     border-bottom: var(--line);
+    @media screen and (max-width: $bp-medium) {
+        padding: 3rem;
+    }
+    @media screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
 }
 
 .description {
@@ -49,7 +70,14 @@
     box-shadow: var(--shadow-light);
     padding: 3rem;
     font-size: 1.4rem;
-    
+    @media screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+    @media screen and (max-width: $bp-small) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
 }
 
 .user-reviews {   
