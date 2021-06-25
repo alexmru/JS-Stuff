@@ -1,22 +1,108 @@
 * {
     margin: 0;
     padding: 0;
+
+}
+
+html {
+    font-size: 62.5%;
     box-sizing: border-box;
+
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
+    font-family: 'Inter', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: hsl(251, 89%, 4%);
 }
 
 .container {
-    width: 80%;
-    position: absolute
+    display: flex;
+    background-color: hsl(263, 72%, 11%);
+    margin: 1rem 20rem;
+    border-radius: 10px;
+    overflow: hidden;
+    color: white;
+    width: 75%;
 }
 
+.info {
+    display: flex;
+    padding: 7rem 9.5rem 7rem 7rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info__title {
+    
+    font-size: 3.4rem;
+    letter-spacing: 0.05rem;
+    line-height: 4rem;
+    
+}
+
+span {
+    color: hsl(277, 64%, 61%);
+}
+
+.info__text {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+    margin-top: -4.5rem;
+}
+
+.info__stats {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.info__stats-number {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    margin-bottom: .7rem;
+}
+
+.lc {
+    text-transform: lowercase;
+}
+
+.info__stats-desc {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-weight: 100;
+    color: hsla(0, 0%, 100%, 0.75);
+
+}
+
+
+.img-box {
+    position: relative;
+}
+
+.img-box::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(277, 64%, 32%);
+    position: absolute;
+    top: 0;
+    left: 0%;
+    opacity: .5;
+}
 
 
 
 .attribution {
-
+    color: white;
 }
