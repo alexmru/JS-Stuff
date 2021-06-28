@@ -1,3 +1,35 @@
+
+//Primary colors
+$dark-blue-primary: hsl(217, 28%, 15%); // intro and email sign up background
+$dark-blue-background: hsl(218, 28%, 13%);  //main background
+$dark-blue-footer: hsl(216, 53%, 9%); //footer background
+$dark-blue-testimonials: hsl(219, 30%, 18%); //testimonials background
+
+//Accent colors
+$accent-cyan: hsl(176, 68%, 64%); // inside call-to-action gradient
+$accent-blue: hsl(198, 60%, 50%); // inside call-to-action gradient
+$accent-light-red: hsl(0, 100%, 63%); // error
+
+// FONTS
+
+$open-sans: 'Open Sans', sans-serif; // Headings, Call-to-actions, Header Navigation
+$raleway: 'Raleway', sans-serif; // body
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+
+
 body {
-    background-color: yellowgreen;
+    font-family: $raleway;
+    background-color: $dark-blue-primary;
+    font-size: 1.4rem;
+    color: white;
 }
