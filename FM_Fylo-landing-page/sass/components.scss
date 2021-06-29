@@ -11,6 +11,7 @@
     &__nav-items {
         display: flex;
         justify-content: space-between;
+        font-family: $raleway;
     }
     &__nav-item {
         list-style: none;
@@ -22,28 +23,173 @@
     }
 
 }
+.image-container {
+    background-image: url(../images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-size: contain;
+    padding-bottom: 19rem;
+}
 
 .cta {
     display: flex;
     position: relative;
-    height: 80vh;
+    width: 55%;
+    margin: 0 auto;
+    text-align: center;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
     &__main-image {
-
+        width: 100%;
     }
     &__image {
-
+        width: 100%;
+        height: 100%;
     }
     &__main-heading {
-
+        font-family: $raleway;
+        font-size: 4.5rem;
+        line-height: 7rem;
+        margin: 4rem 0;
     }
     &__description {
+        padding: 0 9rem;
+        font-size: 2.1rem;
+        line-height: 3rem;
+        margin-bottom: 4rem;
 
     }
     &__button {
+    padding: 2rem 10rem;
+    border: none;
+    border-radius: 100px;
+    background-image: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+    color: white;
+    font-weight: 400;
+    font-size: 1.8rem;
+    }
+}
+
+.features {
+    background-color: $dark-blue-background;
+    padding: 0 10rem;
+    text-align: center;
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+    .row-one {
+        margin-bottom: 10rem;
+    }
+    .row-two {
+        padding-bottom: 10rem;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0 11rem;
+        line-height: 2.1rem;
+    }
+    &__item-photo {
+        align-self: center;
+    }
+    &__item-heading {
+        font-family: $raleway;
+        font-size: 2.1rem;
+        margin: 3rem 0 1rem;
+
+    }
+    &__item-description {
+        font-size: 1.5rem;
+    }
+}
+
+.message {
+    background-color: $dark-blue-background;
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 10rem;
+
+    &__image {
+        width: 40vw;
+        flex: 0 0 1;
+
+    }
+    &__description {
+        padding: 5rem;
+        flex: 0 0 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+    &__heading {
+        font-family: $raleway;
+        margin-top: 6rem;
+        font-size: 3.5rem;
+        padding-right: 15rem;
+        letter-spacing: .02rem;
+        line-height: 4.5rem;
+    }
+    &__p1 {
+        font-size: 1.6rem;
+        
+    }
+    &__p2 {
+        font-size: 1.6rem;
+    }
+    &__button-box {
+        border-bottom: 1px solid white;
+        width: 29%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: .3rem;
+    }
+
+    &__button {
+        font-size: 1.6rem;
+        background-color: transparent;
+        color: white;
+        border:none;
+        padding: 0 0 0 0.2rem;
+        text-align: left;
+    }
+
+    &__button-arrow {
+        margin-right: -.2rem;
+    }
+}
+
+.testimonials {
+    background-color: $dark-blue-background;
+    display: flex;
+    &__section {
+
+    }   
+    &__description {
+
+    }
+    &__profile {
+
+        &-description {
+
+        }
+        &-name {
+
+        }
+        &-position {
+
+        }
+        
+    }
+    &__photo {
 
     }
 }
