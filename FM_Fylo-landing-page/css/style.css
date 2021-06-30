@@ -211,7 +211,8 @@ body {
     flex: 0 0 58%;
     height: 5.5rem;
     padding-left: 4rem;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    outline: none; }
     .access__input::placeholder {
       color: #65e2d9; }
   .access__button {
@@ -227,4 +228,71 @@ body {
 
 .footer {
   background-color: #0b1523;
-  padding-top: 20rem; }
+  padding: 20rem 10rem 1rem;
+  height: 30vh; }
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0; }
+  .footer__s1 {
+    display: flex;
+    flex: 0 0 30%; }
+  .footer__logo {
+    width: 20rem; }
+  .footer__location-icon {
+    height: 2rem;
+    width: 1.6rem;
+    margin-right: 2rem;
+    align-self: flex-start;
+    justify-self: center;
+    margin-top: .5rem; }
+  .footer__location-description {
+    font-size: 1.5rem;
+    line-height: 2.2rem; }
+  .footer__s2 {
+    flex: 0 0 15%;
+    display: flex;
+    flex-direction: column; }
+  .footer__phone {
+    display: flex;
+    padding-bottom: 2rem; }
+    .footer__phone-icon {
+      margin-right: 2.5rem; }
+    .footer__phone-number {
+      font-size: 1.5rem; }
+  .footer__email {
+    display: flex; }
+    .footer__email-icon {
+      margin-right: 2.5rem; }
+    .footer__email-adress {
+      font-size: 1.5rem; }
+  .footer .links {
+    display: flex;
+    flex: 0 0 25%;
+    padding-left: 10rem; }
+    .footer .links__col1 {
+      padding-right: 8rem; }
+    .footer .links__link-item {
+      list-style: none;
+      padding-bottom: 2rem; }
+    .footer .links__link {
+      text-decoration: none;
+      color: white;
+      font-size: 1.5rem; }
+  .footer .social {
+    display: flex;
+    align-items: flex-start;
+    flex: 0 0 15%;
+    position: relative; }
+    .footer .social__icon {
+      display: inline-block;
+      transform: scale(2);
+      margin: 1rem 1.5rem; }
+
+.attribution {
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #0b1523; }
+
+.attribution a {
+  color: #3e52a3; }

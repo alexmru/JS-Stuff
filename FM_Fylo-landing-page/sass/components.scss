@@ -254,6 +254,7 @@
         height: 5.5rem;
         padding-left: 4rem;
         font-size: 1.5rem;
+        outline: none;
         &::placeholder {
             color: hsl(176, 68%, 64%);
             
@@ -275,5 +276,111 @@
 
 .footer {
     background-color: $dark-blue-footer;
-    padding-top: 20rem;
+    padding: 20rem 10rem 1rem;
+
+    height: 30vh;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding: 3rem 0;
+    }
+
+    &__s1 {
+        display: flex;
+        flex: 0 0 30%;
+    }
+    &__logo {
+        width: 20rem;
+    }
+
+    &__location-icon {
+        height: 2rem;
+        width: 1.6rem;
+        margin-right: 2rem;
+        align-self:flex-start;
+        justify-self: center;
+        margin-top: .5rem;
+    }
+    &__location-description {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+    }
+
+    &__s2 {
+        flex: 0 0 15%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__phone {
+        display: flex;
+        padding-bottom: 2rem;
+
+        &-icon {
+        margin-right: 2.5rem;
+
+        }
+        &-number {
+        font-size: 1.5rem;
+        }
+    }
+
+    &__email {
+        display: flex;
+        &-icon {
+        margin-right: 2.5rem;
+
+        }
+        &-adress {
+        font-size: 1.5rem;
+
+        }
+    }
+
+    .links {
+        display: flex;
+        flex: 0 0 25%;
+        padding-left: 10rem;
+
+        &__col1 {
+            padding-right: 8rem;
+
+        }
+        &__col2 {
+
+        }
+
+        &__link-item {
+            list-style: none;
+            padding-bottom: 2rem;
+        }
+        &__link {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+        }
+    }
+
+    .social {
+        display: flex;
+        align-items: flex-start;
+        flex: 0 0 15%;
+        position: relative;
+        &__icon {
+            display: inline-block;
+            transform: scale(2);
+            margin: 1rem 1.5rem;
+        }
+    }
 }
+
+.attribution {
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: $dark-blue-footer;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
