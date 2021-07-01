@@ -10,7 +10,7 @@ const DEFAULT_USER_CHOICE = ROCK;
 
 let gameIsRunning = false;
 
-const getPlayerChoice = function() {
+const getPlayerChoice = () => {
   const selection = prompt(`${ROCK}, ${PAPER} or ${SCISSORS}?`, '').toUpperCase();
   if (
     selection !== ROCK &&
@@ -23,7 +23,7 @@ const getPlayerChoice = function() {
   return selection;
 };
 
-const getComputerChoice = function () {
+const getComputerChoice = () => {
   const randomValue = Math.random()* 10;
   if(randomValue < 3.4) {
     return ROCK;
@@ -34,7 +34,7 @@ const getComputerChoice = function () {
   }
 }
 
-const getWinner = function (player , computer) {
+const getWinner = (player , computer) => {
   if(player === computer) {
     return draw;
   } else if (player === ROCK && computer === SCISSORS ||
@@ -48,7 +48,7 @@ const getWinner = function (player , computer) {
     }
 }
 
-startGameBtn.addEventListener('click', function() {
+startGameBtn.addEventListener('click', () => {
   if(gameIsRunning) {
     return;
   }
@@ -58,6 +58,34 @@ startGameBtn.addEventListener('click', function() {
   const computerSelection = getComputerChoice();
   console.log(playerSelection, computerSelection);
   const winner = getWinner(playerSelection, computerSelection);
-  alert(winner);
+  let message = `You picked${playerSelection}, computer picked ${computerSelection}, `;
+  winner === draw ? message += `it's a draw!` : winner === pWins ? message += ` player wins!` : message += ' computer wins!'
+  alert(message);
   gameIsRunning = false;
 });
+
+// Nu este legat de joc
+
+const sumUp = (resultHandler, ...numbers) => {
+  const validateNumber = number => isNaN(number) ? 0 : number;
+  let sum = 0;
+  for(num of numbers) {
+    sum += validateNumber(num);
+  }
+  resultHandler(sum, 'The result of adding all numbers is ');
+}
+
+const subtractUp = (resultHandler, ...numbers) => {
+  let sum = 0;
+  for(num of numbers) {
+    sum += num;
+  }
+  resultHandler(sum, 'The result of adding all numbers is ');
+}
+
+const showResult = (result , message) => {
+  alert(message + result);
+}
+
+subtractUp(showResult, 10, 6 , 30 , 20);
+sumUp(showResult, 10, 6 , 30 , 20);
