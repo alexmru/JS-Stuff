@@ -20,6 +20,15 @@ btn.addEventListener('click', () => {
   for(item of listItemElements) {
     item.textContent = 'haha i changed this';
     item.style.fontSize = '30px';
+    console.log(btn.id)
+  }
+})
+
+let btn2 = document.getElementById('click2');
+btn2.addEventListener('mouseover', () => {
+  for(i=0; i< listItemElements.length; i++) {
+    listItemElements[i].textContent = `Item ${i+1}`;
+    listItemElements[i].style.fontSize = '30px'
   }
 })
 
