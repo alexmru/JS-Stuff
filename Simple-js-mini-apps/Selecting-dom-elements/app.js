@@ -1,4 +1,5 @@
 const h1 = document.getElementById('main-title');
+const ul = document.querySelector('ul');
 
 
 h1.textContent = 'Some new title!';
@@ -22,6 +23,7 @@ btn.addEventListener('click', () => {
     item.style.fontSize = '30px';
     console.log(btn.id)
   }
+  ul.classList.toggle('bg-red')
 })
 
 let btn2 = document.getElementById('click2');
@@ -35,3 +37,13 @@ btn2.addEventListener('mouseover', () => {
 for (const listItemEl of listItemElements) {
   console.dir(listItemEl);
 }
+
+// crearea unui nou element in lista
+
+const newLi = document.createElement('li');
+newLi.textContent = 'new list item , created with JS'
+ul.appendChild(newLi);
+
+const firstLi = document.createElement('li');
+firstLi.textContent = 'Acesta va fi primul item';
+ul.prepend(firstLi);
