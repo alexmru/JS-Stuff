@@ -1,12 +1,19 @@
-function domainName(url){
-  let match1 = url.match(/\/{1,2}(\w*)\./);
-  let match2 = url.match(/\w?\.(\w*)\./);
-    if (match1) {
-        return match1[1];
-    } else if (match2) {
-        return match2[1];
-    }
+function domainName(strng){
+  let matchHTTP = strng.match(/https?:\/\/www\.([A-Za-z0-9-]+)\./);
+  let matchWWW = strng.match(/www\.([A-Za-z0-9-]+)\./);
+  let matchNoPrefix = strng.match(/([A-Za-z0-9-]+)\./);
+  if(matchHTTP) {
+      return matchHTTP[1];
+  } else if (matchWWW) {
+      return matchWWW[1];
+  } else if (matchNoPrefix) {
+      return matchNoPrefix[1];
+  }
 }
 
 
-console.log(domainName('www.google.ro'))
+console.log(domainName('dwndq4v-vr5.it/img/'))
+
+// function domainName(url){
+//     return url.match(/(?:http(?:s)?:\/\/)?(?:w{3}\.)?([^\.]+)/i)[1];
+// }
