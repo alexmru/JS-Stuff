@@ -17,4 +17,4 @@ function duplicateCount(text){
     return duplicates.length;
   }
 
-duplicateCount('aabBcde');
+console.log(duplicateCount('aabBcde'));
