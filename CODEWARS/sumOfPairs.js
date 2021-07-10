@@ -1,0 +1,3 @@
+function sumPairs(ints, s) {
+
+  }
