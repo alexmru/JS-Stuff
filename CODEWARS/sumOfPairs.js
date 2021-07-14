@@ -2,6 +2,5 @@
     
 //   }
 
-const list = ['alex' , 'oana' , 'george', 'adrian', 'ninel' , 'steluta', 'aurelia', 'ilie'];
 
 
